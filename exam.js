@@ -38,6 +38,7 @@ const countVowels = str => {
             count++
         }
     })
+    console.log(count)
 
 }
 countVowels('Hello World')
@@ -152,11 +153,11 @@ getStudentInfo(info)
 // Task 13 -> Count Property Occurences 
 
 const count0ccurrences = cars => {
-    let toyota = 0;
-    let ford = 0;
+    let counts = {};
     for (let car of cars) {
-
+        counts[car.make] =(counts[car.make] || 0) + 1
     }
+    console.log(counts)
 }
 const cars = [{
     make: 'Toyota'
