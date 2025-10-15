@@ -20,3 +20,10 @@ const calculaterGrade = score => {
 
 calculaterGrade(85)
 
+// Task 2 -> Even or Odd
+
+const isEvenOrOdd = number => {
+    number % 2 === 0 ? console.log('Even') : console.log('Odd')
+}
+isEvenOrOdd(9)
+
