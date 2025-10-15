@@ -55,3 +55,36 @@ sumArray([1, 2, 3, 4])
 // Task 5 -> Find the Largest Number 
 const findLargest = numbers => console.log(Math.max(...numbers))
 findLargest([5, 2, 8, 1, 9])
+
+// Task 6 -> REverse an Array
+
+const reverseArray = arr => {
+    const array = arr.reduce((reversed, current) => {
+        return [current, ...reversed]
+    }, [])
+    console.log(array)
+}
+reverseArray([1, 2, 3, 4])
+
+
+// Task 7 -> FizzBuzz 
+
+const fizzBuzz = n => {
+    const arr = []
+    for (let i = 1; i <= n; i++) {
+        arr.push(i)
+    }
+    for (let ele in arr) {
+        if (arr[ele] % 3 === 0 && arr[ele] % 5 === 0) {
+            arr[ele] = 'FizzBuzz'
+        }
+        if (arr[ele] % 3 === 0) {
+            arr[ele] = 'Fizz'
+        }
+        else if (arr[ele] % 5 === 0) {
+            arr[ele] = 'Buzz'
+        }
+    }
+    console.log(arr)
+}
+fizzBuzz(15)
