@@ -132,3 +132,51 @@ const calculateTotalPrice = products => {
 const product = [{ price: 10, quantity: 2 }, { price: 5, quantity: 5 }]
 calculateTotalPrice(product)
 
+// Task 12 -> Student Details 
+
+const getStudentInfo = students => {
+    let string = []
+    string.push(`Name: ${students.name}`);
+    string.push(`Age: ${students.age}`);
+    string.push(`Courses: ${students.courses[0]}, ${students.courses[1]}`)
+    console.log(string.join())
+}
+
+const info = {
+    name: 'David',
+    age: 20,
+    courses: ['History', 'Art'],
+}
+getStudentInfo(info)
+
+// Task 13 -> Count Property Occurences 
+
+const count0ccurrences = cars => {
+    let toyota = 0;
+    let ford = 0;
+    for (let car of cars) {
+
+    }
+}
+const cars = [{
+    make: 'Toyota'
+}, {
+    make: 'Ford'
+}, {
+    make: 'Toyota'
+}]
+
+count0ccurrences(cars)
+
+// Task 14 -> Merge and Remove Duplicates 
+
+const mergeUnique = (arr1, arr2) => {
+    let arr = [...arr1]
+    for (let ele of arr2) {
+        if (!arr1.includes(ele)) {
+            arr.push(ele)
+        }
+    }
+    console.log(arr)
+}
+mergeUnique([1, 2, 3], [3, 4, 5])
