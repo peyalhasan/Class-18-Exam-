@@ -1,5 +1,6 @@
 // Task 1 -> Grade CAlculator
 
+
 const calculaterGrade = score => {
     if (score <= 100 && score >= 90) {
         console.log('Grade - A')
@@ -88,3 +89,46 @@ const fizzBuzz = n => {
     console.log(arr)
 }
 fizzBuzz(15)
+
+// Task 8 -> Square the Numbers 
+
+const squareNumbers = numbers => {
+    const square = numbers.map(ele => ele * ele)
+    console.log(square)
+}
+squareNumbers([1, 2, 3, 4])
+
+// Task 9 -> Filter Out Negative Numbers 
+
+const filterPositive = number => {
+    const filterNumber = number.filter(num => num > 0)
+    console.log(filterNumber)
+}
+filterPositive([1, -2, 3, -4, 5])
+
+// Task 10 -> Find a User by Id
+
+const findUserById = (users, id) => {
+    const found = users.find(user => {
+        if (user.id == id) {
+            console.log(user)
+        }
+    })
+}
+const pass = [{ id: 1, name: 'Alice' }, { id: 2, name: 'Bob' }]
+findUserById(pass, 2)
+
+// Task 11 -> Calculate Total Price
+
+const calculateTotalPrice = products => {
+    const totalPrice = products.reduce((acc, current) => {
+        const total = current.price * current.quantity;
+        acc += total
+        return acc
+    }, 0)
+    console.log(totalPrice)
+}
+
+const product = [{ price: 10, quantity: 2 }, { price: 5, quantity: 5 }]
+calculateTotalPrice(product)
+
