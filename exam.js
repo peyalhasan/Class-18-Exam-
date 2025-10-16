@@ -203,3 +203,20 @@ const removeDuplicate = arr =>{
     console.log(remove)
 }
 removeDuplicate(number)
+
+const arr1 = [1, 2, 3];
+const arr2 = [3, 4, 5];
+
+const findUnique = (ar, ar2) =>{
+    const newArray = [];
+    const find = ar2.filter(ele => {
+        !ar.includes(ele)? ar.push(ele) : ar
+    })
+    return ar
+    
+
+}
+
+console.log(findUnique(arr1, arr2));
+
+
