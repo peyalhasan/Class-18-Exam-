@@ -204,19 +204,33 @@ const removeDuplicate = arr =>{
 }
 removeDuplicate(number)
 
+
+
+// const findUnique = (ar, ar2) =>{
+//     const newArray = [];
+//     const find = ar2.filter(ele => {
+//         !ar.includes(ele)? ar.push(ele) : ar
+//     })
+//     return ar
+    
+
+// }
+
+// console.log(findUnique(arr1, arr2));
+
+
 const arr1 = [1, 2, 3];
 const arr2 = [3, 4, 5];
 
-const findUnique = (ar, ar2) =>{
-    const newArray = [];
-    const find = ar2.filter(ele => {
-        !ar.includes(ele)? ar.push(ele) : ar
-    })
-    return ar
-    
 
+const uniqe = (ar1, ar2) => {
+    const uniqueFromArr1 = ar1.filter(item => !ar2.includes(item));
+    const uniqueFromArr2 = ar2.filter(item => !ar1.includes(item));
+    return [...uniqueFromArr1, ...uniqueFromArr2];
 }
 
-console.log(findUnique(arr1, arr2));
 
+
+console.log(uniqe(arr1, arr2)); 
+// Output: [1, 2, 4, 5] 'ki'
 
