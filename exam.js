@@ -181,3 +181,25 @@ const mergeUnique = (arr1, arr2) => {
     console.log(arr)
 }
 mergeUnique([1, 2, 3], [3, 4, 5])
+
+
+// Chatgpt problems 
+
+// Problem --1 -->  Find second largest number 
+
+const secondLargestNumber = arr => {
+    const unique = [...new Set(arr)];
+
+    unique.sort((a , b) => b - a);
+
+    console.log(unique[1], 'uniqe')
+}
+const numbers =[1, 5, 6, 9, 7, 2, 3, 4, 1, 8]
+secondLargestNumber(numbers)
+const number =[1, 5, 6, 9, 7, 2, 3, 4, 1, 8]
+
+const removeDuplicate = arr =>{
+    const remove = [...new Set(arr)]
+    console.log(remove)
+}
+removeDuplicate(number)
