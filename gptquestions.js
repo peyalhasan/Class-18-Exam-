@@ -1,0 +1,35 @@
+// Task -- 1 -->  Find unique Elements 
+
+const findUnique = (arr1, arr2) =>{
+    const first = arr1.filter(item => !arr2.includes(item))
+    const second = arr2.filter(item => !arr1.includes(item))
+    console.log(first, second)
+    return[...first, ...second]
+}
+
+const arr1 = [1, 2, 3];
+const arr2 = [3, 4, 5];
+
+findUnique(arr1, arr2)
+
+// Task -- 2 -->  Remove Duplicates 
+
+const removeDuplicates = arr => {
+    const remove = [...new Set(arr)]
+    console.log(remove)
+}
+const duplicate = [1, 2, 3, 4, 1, 2, 6, 7, 8, 9];
+removeDuplicates(duplicate)
+
+// Task -- 3 --> Symmetric Difference
+
+const symmetricDifference = (arr1, arr2) =>{
+    const one = arr1.filter(item => !arr2.includes(item));
+    const two = arr2.filter(item => !arr1.includes(item))
+    return [...one, ...two]
+}
+
+console.log(symmetricDifference(arr1, arr2))
+
+//    -----------------Advanced----------------------
+// Task  -- 11 --> 

@@ -225,6 +225,7 @@ const arr2 = [3, 4, 5];
 
 const uniqe = (ar1, ar2) => {
     const uniqueFromArr1 = ar1.filter(item => !ar2.includes(item));
+
     const uniqueFromArr2 = ar2.filter(item => !ar1.includes(item));
     return [...uniqueFromArr1, ...uniqueFromArr2];
 }
