@@ -32,4 +32,11 @@ const symmetricDifference = (arr1, arr2) =>{
 console.log(symmetricDifference(arr1, arr2))
 
 //    -----------------Advanced----------------------
-// Task  -- 11 --> 
+// Task  -- 11 --> Second Largest Number
+
+const secondLargest = arr => {
+    const removeDuplicate = [...new Set(arr)]
+    const sorts = removeDuplicate.sort((a, b )=> b - a )
+    return sorts[1]
+}
+console.log(secondLargest(duplicate))
