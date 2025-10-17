@@ -40,3 +40,30 @@ const secondLargest = arr => {
     return sorts[1]
 }
 console.log(secondLargest(duplicate))
+
+// Task  -- 13 --> Count Occurrences 
+
+const countOccurrences = arr => {
+    let count = {}
+    for(const element of arr){
+        count[element] = (count[element] || 0) + 1;
+    }
+    console.log(count)
+}
+
+countOccurrences(["a", "b", "a"])
+
+// Task  -- 14 --> Palindrome Check 
+
+const palindromeCheck = str => {
+    const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+   const reversed = cleaned.split('').reverse().join('');
+      if(cleaned === reversed){
+    return true
+   }
+   else{
+    return false
+   }
+}
+const texts = "A man, a plan, a canal: Panama";
+console.log(palindromeCheck(texts))
