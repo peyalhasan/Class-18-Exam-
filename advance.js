@@ -31,3 +31,19 @@ const cloned = deepClone(original);
 
 console.log("Original:", original); // { a: 1, b: { c: 2 } } → unchanged
 console.log("Cloned:", cloned);     // { a: 1, b: { c: 42 } } → independent
+
+
+
+
+function countStr (str) {
+    let result = {
+        Count: 0,
+    }
+    const newString = str.split('')
+    for(i = 0; i< newString.length; i++){
+        result.Count =result.Count + 1;
+    }
+    return result
+}
+const str = 'Shayon';
+console.log(countStr(str))
